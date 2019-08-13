@@ -5,10 +5,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    border: 3px solid grey;
     margin: 0 7.5px 15px;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
+    background-position: 0 0;
+    transition: background-size 0.5s ease-in;
+    
 
     &.large{
       height: 400px;
@@ -21,11 +24,17 @@
     &:last-child {
       margin-left: 7.5px;
     }
+    
     &:hover{
+      transition: background-size 4s ease;
+      background-size: 105% 105%;
+      background-position: 5% 5%;
       .content{
+        transition:all 0.5s;
         opacity: 0.9;
       }
     }
+
     .content {
       height: 90px;
       padding: 0 25px;
