@@ -4,7 +4,6 @@ import DirectoryMenu from '../../components/directory-menu/directory-menu.compon
 
 export const HomePage = () => (
     <div className="homepage">
-        <h1>Fyndd</h1>
         <DirectoryMenu />
     </div>
 )
