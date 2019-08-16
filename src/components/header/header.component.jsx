@@ -12,7 +12,7 @@ export const Header = () => (
         <div className="btn-right-grp">
             <Link className='option' to='/shop'>Shop</Link>
             <Link className='option' to='/cart'>Cart</Link>
-            <Link className='option' to='/Log In'>Log In</Link>
+            <Link className='option' to='/account'>Log In</Link>
         </div>
     </div>
 )
