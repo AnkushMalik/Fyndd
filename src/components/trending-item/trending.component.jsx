@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { CollectionItem } from '../collection-item/collection-item.component'
+import './trending.styles.scss'
 export const TrendingItems = ({ title, items }) => (
     <div className='trending-items'>
         <h1 className='title'>{title}</h1>
@@ -8,7 +10,7 @@ export const TrendingItems = ({ title, items }) => (
                 items
                     .filter((item, idx) => idx < 4)
                     .map(e => (
-                        <h4>{e.name}</h4>
+                        < CollectionItem key={e.id} item={e} />
                     ))
             }
         </div>

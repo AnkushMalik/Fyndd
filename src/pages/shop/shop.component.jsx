@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ShopData from './shop.data'
-import { TrendingItems } from '../../components/trending-component/trending.component'
+import { TrendingItems } from '../../components/trending-item/trending.component'
 
 class ShopPage extends React.Component {
     constructor(props) {
