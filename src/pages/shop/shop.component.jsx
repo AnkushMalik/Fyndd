@@ -1,6 +1,7 @@
 import React from 'react'
 
 import ShopData from './shop.data'
+import { TrendingItems } from '../../components/trending-component/trending.component'
 
 class ShopPage extends React.Component {
     constructor(props) {
@@ -10,8 +11,15 @@ class ShopPage extends React.Component {
         }
     }
     render() {
+        const { collections } = this.state
         return (
-            <div>Shop Page</div>
+            <div className='shop-page'>
+                {
+                    collections.map(({ id, ...otherCollectionProps }) => (
+                        <TrendingItems key={id} {...otherCollectionProps} />
+                    ))
+                }
+            </div>
         )
     }
 }
