@@ -3,14 +3,15 @@ import React from 'react'
 import { FormInput } from '../../form-input/forminput.component'
 import { CustomButton } from '../../custom-button/custom-button.component'
 import { signInWithGoogle } from '../../../firebase/firebase.utils'
-import './signin.styles.scss'
+import './signup.styles.scss'
 
-class SignIn extends React.Component {
+class SignUp extends React.Component {
     constructor() {
         super();
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            display_name: ''
         }
     }
     handleSubmit = e => {
@@ -23,9 +24,9 @@ class SignIn extends React.Component {
     }
     render() {
         return (
-            < div className="sign-in" >
-                <h2>I already have an account</h2>
-                <span className='title'>Sign In with your registered email</span>
+            < div className="sign-up" >
+                <h2>New to Fyndd Store?</h2>
+                <span className='title'>Create your Account</span>
                 <form onSubmit={this.handleSubmit}>
                     <FormInput
                         name='email'
@@ -34,6 +35,13 @@ class SignIn extends React.Component {
                         value={this.state.email}
                         handleChange={this.handleChange}
                     />
+                    {/* <FormInput
+                        name='displayName'
+                        label='Display Name'
+                        type='text'
+                        value={this.state.display_name}
+                        handleChange={this.handleChange}
+                    /> */}
                     <FormInput
                         name='password'
                         label='Password'
@@ -41,8 +49,15 @@ class SignIn extends React.Component {
                         value={this.state.password}
                         handleChange={this.handleChange}
                     />
+                    {/* <FormInput
+                        name='repeatPassword'
+                        label='Repeat Password'
+                        type='password'
+                        value={this.state.password}
+                        handleChange={this.handleChange}
+                    /> */}
                     <div className="buttons">
-                        <CustomButton type='submit'> Sign In </CustomButton>
+                        <CustomButton type='submit'> Sign Up </CustomButton>
                         <CustomButton onClick={signInWithGoogle} isGooglebtn='Googlebtn'> Google </CustomButton>
                     </div>
                 </form>
@@ -50,4 +65,4 @@ class SignIn extends React.Component {
         )
     }
 }
-export default SignIn
+export default SignUp
